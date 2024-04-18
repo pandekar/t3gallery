@@ -27,6 +27,24 @@ const UploadSVG = () => {
   )
 }
 
+/* loading spinner SVG from github n3r4zzurr0 */
+// separate the <style to global.css> <svg> is used here
+const LoadingSpinnerSVG = () => {
+  return (
+    <svg
+      width="24"
+      height="24"
+      stroke="#ffffff"
+      viewBox="0 0 24 24"
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      <g className="spinner_V8m1">
+        <circle cx="12" cy="12" r="9.5" fill="none" strokeWidth="3"></circle>
+      </g>
+    </svg>
+  )
+}
+
 const useUploadThingInputProps = (...args: Input) => {
   const $ut = useUploadThing(...args);
 
@@ -50,15 +68,27 @@ const useUploadThingInputProps = (...args: Input) => {
   };
 };
 
+// // testing the spinner directly in browser
+// function makeSpinner() {
+//   return toast(
+//     <div className="flex items-center gap-2">
+//       <LoadingSpinnerSVG /><span className="text-lg text-white">Uploading...</span>
+//     </div>, { duration: 10000, id: "upload-begin" }
+//   )
+// }
+// // call in browser console, type "window.makeSpinner()"
+// window.makeSpinner = makeSpinner;
+
 export default function SimpleUploadButton() {
   const router = useRouter()
 
   const {inputProps} = useUploadThingInputProps("imageUploader", {
     onUploadBegin() {
-      toast("Uploading...", {
-        duration: 10000,
-        id: "upload-begin"
-      })
+      toast(
+        <div className="flex items-center gap-2">
+          <LoadingSpinnerSVG /><span className="text-lg text-white">Uploading...</span>
+        </div>, { duration: 10000, id: "upload-begin" }
+      )
     },
     onClientUploadComplete() {
       // dismiss toast
