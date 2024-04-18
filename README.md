@@ -23,6 +23,6 @@ posthog (analytics)
 - [x] routing/image page (paralel route)
 - [x] update upload button
 - [x] setup shadcn-ui (specifically toast)
-- [ ] analytics (posthog)
+- [x] analytics (posthog)
 - [ ] delete button (w/ server actions)
 - [ ] ratelimitting (upstash)
