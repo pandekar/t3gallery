@@ -15,6 +15,8 @@ nextgram: https://github.com/vercel/nextgram/blob/main/app/%40modal/(.)photos/%5
 - [x] use Next/Image component
 - [x] error management (w/ sentry)
 - [x] routing/image page (paralel route)
+- [x] update upload button
+- [x] setup shadcn-ui (specifically toast)
 - [ ] delete button (w/ server actions)
 - [ ] analytics (posthog)
 - [ ] ratelimitting (upstash)
