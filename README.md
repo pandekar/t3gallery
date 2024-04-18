@@ -1,4 +1,6 @@
 # T3 Gallery
+youtube: https://youtu.be/d5x0JCZbAJs?si=6yp1XESqrGLzbJsb
+nextgram: https://github.com/vercel/nextgram/blob/main/app/%40modal/(.)photos/%5Bid%5D/modal.tsx
 
 ## TODO
 
