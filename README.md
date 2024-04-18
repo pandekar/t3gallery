@@ -24,5 +24,5 @@ posthog (analytics)
 - [x] update upload button
 - [x] setup shadcn-ui (specifically toast)
 - [x] analytics (posthog)
-- [ ] delete button (w/ server actions)
-- [ ] ratelimitting (upstash)
+- [x] delete button (w/ server actions)
+- [x] ratelimitting (upstash)

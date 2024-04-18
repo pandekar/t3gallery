@@ -5,7 +5,6 @@ import { useUploadThing } from "~/utils/uploadthing";
 import { toast } from "sonner"
 import { usePostHog } from "posthog-js/react";
 
-
 // infered input off useUploadThing
 type Input = Parameters<typeof useUploadThing>;
 
@@ -92,6 +91,11 @@ export default function SimpleUploadButton() {
           <LoadingSpinnerSVG /><span className="text-lg text-white">Uploading...</span>
         </div>, { duration: 10000, id: "upload-begin" }
       )
+    },
+    onUploadError: (error) => {
+      posthog.capture("upload_error", { error });
+      toast.dismiss("upload-begin");
+      toast.error("Upload failed");
     },
     onClientUploadComplete() {
       // dismiss toast
